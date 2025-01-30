@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Thumbnail Downloader</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+    <div class="container">
+        <h1>YouTube Thumbnail Downloader</h1>
+        <p>Paste a YouTube video URL and choose thumbnail quality.</p>
+        
+        <input type="text" id="videoUrl" placeholder="Enter YouTube video URL">
+        
+        <label for="quality">Select Quality:</label>
+        <select id="quality">
+            <option value="maxresdefault">HD (Max Resolution)</option>
+            <option value="sddefault">SD (Standard Definition)</option>
+            <option value="mqdefault">Medium Quality</option>
+            <option value="hqdefault">Low Quality</option>
+        </select>
+
+        <button onclick="getThumbnail()">Get Thumbnail</button>
+        
+        <div id="thumbnail-container" style="display: none;">
+            <h3>Thumbnail Preview:</h3>
+            <img id="thumbnailImage" src="" alt="Thumbnail">
+            <a id="downloadBtn" href="#" download="youtube_thumbnail.jpg">Download Image</a>
+        </div>
+    </div>
+
+    <script src="javascript.js"></script>
+</body>
+</html>
